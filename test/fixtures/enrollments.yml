@@ -1,0 +1,27 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  course: one
+  terms_accepted: false
+  heart_problem: false
+  chest_pain: false
+  recent_chest_pain: false
+  dizziness: false
+  bone_problem: false
+  blood_pressure_meds: false
+  other_reasons: false
+  physical_activity_responsibility: false
+
+two:
+  user: two
+  course: two
+  terms_accepted: false
+  heart_problem: false
+  chest_pain: false
+  recent_chest_pain: false
+  dizziness: false
+  bone_problem: false
+  blood_pressure_meds: false
+  other_reasons: false
+  physical_activity_responsibility: false

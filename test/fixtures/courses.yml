@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  start_date: 2026-09-07 19:32:47
+  end_date: 2026-09-07 19:32:47
+  class_time: MyString
+  slots: 1
+  modality: MyString
+  custom_modality: MyString
+  user: one
+
+two:
+  start_date: 2026-09-07 19:32:47
+  end_date: 2026-09-07 19:32:47
+  class_time: MyString
+  slots: 1
+  modality: MyString
+  custom_modality: MyString
+  user: two
