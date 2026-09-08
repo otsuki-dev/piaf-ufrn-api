@@ -1,0 +1,13 @@
+<p>Olá, <strong><%= @student.name %></strong>!</p>
+
+<p>Sua inscrição na turma de <strong><%= @course.modality_label %></strong> foi <strong>confirmada</strong>.</p>
+
+<ul>
+  <li>Modalidade: <%= @course.modality_label %></li>
+  <li>Horário: <%= @course.class_time %></li>
+  <li>Período: <%= l(@course.start_date.to_date, format: :long) %> até <%= l(@course.end_date.to_date, format: :long) %></li>
+</ul>
+
+<p>Compareça respeitando as orientações da COESPE e do seu instrutor.</p>
+
+<p>Atenciosamente,<br>Equipe PIAF – COESPE/UFRN</p>

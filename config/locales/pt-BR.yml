@@ -1,0 +1,83 @@
+pt-BR:
+  activerecord:
+    errors:
+      messages:
+        record_invalid: "A validação falhou: %{errors}"
+
+  devise:
+    confirmations:
+      confirmed: "Sua conta foi confirmada com sucesso."
+      send_instructions: "Você receberá um e-mail com instruções para confirmar sua conta em alguns minutos."
+      send_paranoid_instructions: "Se o seu e-mail existir em nossa base, você receberá um e-mail com instruções em alguns minutos."
+    failure:
+      already_authenticated: "Você já está conectado(a)."
+      unauthenticated: "Você precisa entrar ou se cadastrar antes de continuar."
+      unconfirmed: "Você precisa confirmar seu e-mail antes de continuar."
+      invalid: "E-mail ou senha inválidos."
+      invalid_token: "Token de autenticação inválido."
+      timeout: "Sua sessão expirou. Entre novamente para continuar."
+      locked: "Sua conta está bloqueada."
+      not_found_in_database: "E-mail ou senha inválidos."
+    passwords:
+      send_instructions: "Você receberá um e-mail com instruções para redefinir sua senha em alguns minutos."
+      send_paranoid_instructions: "Se o seu e-mail existir em nossa base, você receberá um link de recuperação em alguns minutos."
+      updated: "Sua senha foi alterada com sucesso."
+      updated_not_active: "Sua senha foi alterada com sucesso."
+      no_token: "Não é possível acessar esta página sem vir de um e-mail de redefinição de senha."
+    sessions:
+      signed_in: "Entrada realizada com sucesso."
+      signed_out: "Saída realizada com sucesso."
+      signed_out_failed: "Não foi possível encerrar a sessão."
+      already_signed_out: "Sessão já encerrada."
+    registrations:
+      signed_up: "Cadastro realizado com sucesso. Confirme seu e-mail antes de continuar."
+      updated: "Seu perfil foi atualizado com sucesso."
+      destroyed: "Sua conta foi encerrada."
+    mailer:
+      confirmation_instructions:
+        subject: "Instruções de confirmação"
+      reset_password_instructions:
+        subject: "Instruções de redefinição de senha"
+      unlock_instructions:
+        subject: "Instruções de desbloqueio"
+      email_changed:
+        subject: "E-mail alterado"
+      password_change:
+        subject: "Senha alterada"
+
+  errors:
+    record_not_found: "Recurso não encontrado."
+    record_not_unique: "Registro duplicado."
+    forbidden: "Você não tem permissão para executar esta ação."
+    missing_parameter: "O parâmetro obrigatório %{param} está ausente."
+    unpermitted_parameters: "Parâmetros não permitidos: %{params}."
+    token_expired: "Sessão expirada. Faça login novamente."
+    token_invalid: "Token inválido."
+    internal_error: "Ocorreu um erro inesperado. Tente novamente mais tarde."
+    rate_limited: "Muitas tentativas. Aguarde alguns segundos e tente novamente."
+    course_has_enrollments: "Não é possível remover uma turma que possui inscrições."
+    unconfirmed: "E-mail não confirmado."
+    invalid_credentials: "E-mail ou senha inválidos."
+    unauthenticated: "Autenticação necessária."
+    no_recipients: "Nenhum destinatário encontrado para o público informado."
+    invalid_date: "Data inválida. Use o formato AAAA-MM-DD."
+
+  admin:
+    notifications:
+      enqueued: "Notificações enfileiradas para envio."
+
+  enrollment_mailer:
+    confirmed:
+      subject: "Inscrição confirmada — %{modality}"
+    waitlisted:
+      subject: "Você entrou na lista de espera — %{modality}"
+    waitlist_promoted:
+      subject: "Vaga liberada — sua inscrição foi confirmada (%{modality})"
+    cancelled:
+      subject: "Inscrição cancelada — %{modality}"
+    inactive:
+      subject: "Inscrição desativada por ausência"
+
+  notification_mailer:
+    notify:
+      subject: "Comunicado PIAF – COESPE/UFRN"
