@@ -84,4 +84,4 @@ gem "paper_trail"
 # Crontab scheduling
 gem "whenever", require: false
 
-gem "json", "~> 2.8"
+gem "json", "~> 3.0"
