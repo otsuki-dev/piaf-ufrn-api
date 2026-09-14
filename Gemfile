@@ -50,7 +50,7 @@ group :development, :test do
 
   gem "factory_bot_rails"
   gem "faker"
-  gem "pundit-matchers", "~> 3.1"
+  gem "pundit-matchers", "~> 4.0"
   gem "rspec-rails"
   gem "shoulda-matchers"
 end
