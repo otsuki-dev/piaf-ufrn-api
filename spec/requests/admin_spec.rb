@@ -101,6 +101,27 @@ RSpec.describe "Admin API", type: :request do
       expect(response).to have_http_status(:unprocessable_content)
       expect(json_payload.dig("errors", 0, "code")).to eq("no_recipients")
     end
+
+    it "rejects notifications without a subject or body before resolving recipients" do
+      api_post "/api/v1/admin/notifications", {
+        subject: "  ",
+        body: "Mensagem válida.",
+        audience: { user_ids: [ target.id ] }
+      }, sign_in_via_api(admin)
+
+      expect(response).to have_http_status(:bad_request)
+      expect(json_payload.dig("errors", 0, "code")).to eq("missing_parameter")
+      expect(enqueued_jobs).to be_empty
+
+      api_post "/api/v1/admin/notifications", {
+        subject: "Assunto válido",
+        audience: { user_ids: [ target.id ] }
+      }, sign_in_via_api(admin)
+
+      expect(response).to have_http_status(:bad_request)
+      expect(json_payload.dig("errors", 0, "code")).to eq("missing_parameter")
+      expect(enqueued_jobs).to be_empty
+    end
   end
 
   describe "POST /api/v1/admin/students/:id/deactivate" do

@@ -14,6 +14,11 @@ module Api
         #
         # Emails are enqueued asynchronously via Delayed Job.
         def create
+          subject = params.require(:subject).to_s.strip
+          body = params.require(:body).to_s.strip
+          raise ActionController::ParameterMissing, :subject if subject.blank?
+          raise ActionController::ParameterMissing, :body if body.blank?
+
           recipients = resolve_recipients
 
           if recipients.none?
@@ -23,7 +28,7 @@ module Api
           end
 
           recipients.find_each do |recipient|
-            NotificationMailer.with(user: recipient, subject: params[:subject], body: params[:body])
+            NotificationMailer.with(user: recipient, subject: subject, body: body)
                               .notify
                               .deliver_later
           end
