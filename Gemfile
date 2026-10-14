@@ -76,7 +76,7 @@ gem "rack-attack"
 gem "blueprinter"
 
 # Pagination
-gem "pagy", "~> 9"
+gem "pagy", "~> 43"
 
 # Auditing
 gem "paper_trail"
